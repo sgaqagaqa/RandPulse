@@ -1,0 +1,110 @@
+{
+  "feeds": [
+    {"name": "Moneyweb", "url": "https://www.moneyweb.co.za/feed/", "category": "economy", "weight": 2.5, "sa": true, "max": 30},
+    {"name": "BusinessTech", "url": "https://businesstech.co.za/news/feed/", "category": "economy", "weight": 2, "sa": true, "max": 30},
+    {"name": "Business Maverick", "url": "https://www.dailymaverick.co.za/section/business-maverick/feed/", "category": "economy", "weight": 2.5, "sa": true, "max": 25},
+
+    {"name": "SA markets (Google News)", "gnews": "JSE OR rand OR \"South African Reserve Bank\" OR \"repo rate\" OR \"Top 40\"", "category": "markets", "weight": 2.5, "sa": true, "max": 40},
+    {"name": "SA economy (Google News)", "gnews": "\"South Africa\" (economy OR inflation OR GDP OR unemployment OR budget OR Treasury OR \"Stats SA\")", "category": "economy", "weight": 2.5, "sa": true, "max": 40},
+    {"name": "SA commodities (Google News)", "gnews": "\"South Africa\" (gold OR platinum OR palladium OR mining OR coal OR \"fuel price\")", "category": "commodities", "weight": 2, "sa": true, "max": 30},
+    {"name": "SA empowerment (Google News)", "gnews": "\"South Africa\" (SMEs OR stokvel OR \"economic empowerment\" OR \"township economy\" OR \"youth unemployment\" OR \"financial inclusion\")", "category": "economy", "weight": 2, "sa": true, "max": 30},
+    {"name": "JSE companies (Google News)", "gnews": "(Sasol OR Naspers OR Prosus OR Capitec OR Absa OR \"Standard Bank\" OR FirstRand OR \"Anglo American\" OR Sibanye OR MTN) results OR earnings OR shares", "category": "markets", "weight": 2, "sa": true, "max": 30},
+    {"name": "Global markets (Google News)", "gnews": "site:reuters.com (markets OR commodities OR \"emerging markets\" OR oil OR gold)", "category": "markets", "weight": 2, "max": 30},
+
+    {"name": "BBC Business", "url": "https://feeds.bbci.co.uk/news/business/rss.xml", "category": "news", "weight": 2, "max": 25},
+    {"name": "The Guardian Business", "url": "https://www.theguardian.com/uk/business/rss", "category": "news", "weight": 1.5, "max": 25},
+    {"name": "CNBC", "url": "https://www.cnbc.com/id/100003114/device/rss/rss.html", "category": "markets", "weight": 2, "max": 30},
+    {"name": "CNBC Finance", "url": "https://www.cnbc.com/id/10000664/device/rss/rss.html", "category": "markets", "weight": 1.5, "max": 25},
+    {"name": "MarketWatch", "url": "https://feeds.marketwatch.com/marketwatch/topstories/", "category": "markets", "weight": 2, "max": 30},
+    {"name": "MarketWatch Market Pulse", "url": "https://feeds.marketwatch.com/marketwatch/marketpulse/", "category": "markets", "weight": 1.5, "max": 30},
+    {"name": "Yahoo Finance", "url": "https://finance.yahoo.com/news/rssindex", "category": "markets", "weight": 1.5, "max": 30},
+    {"name": "Investing.com", "url": "https://www.investing.com/rss/news.rss", "category": "markets", "weight": 1.5, "max": 30},
+    {"name": "OilPrice.com", "url": "https://oilprice.com/rss/main", "category": "commodities", "weight": 2, "max": 25},
+    {"name": "Mining.com", "url": "https://www.mining.com/feed/", "category": "commodities", "weight": 2, "max": 25},
+
+    {"name": "Mastodon #economy", "url": "https://mastodon.social/tags/economy.rss", "category": "posts", "weight": 0.5, "max": 20},
+    {"name": "Mastodon #finance", "url": "https://mastodon.social/tags/finance.rss", "category": "posts", "weight": 0.5, "max": 20},
+    {"name": "Mastodon #markets", "url": "https://mastodon.social/tags/markets.rss", "category": "posts", "weight": 0.5, "max": 20}
+  ],
+
+  "instruments": [
+    {"sym": "ZAR=X", "name": "US dollar / rand", "group": "rand", "prefix": "R", "dec": 3, "note": "Rand per US dollar", "stooq": "usdzar", "move": 1.0},
+    {"sym": "EURZAR=X", "name": "Euro / rand", "group": "rand", "prefix": "R", "dec": 3, "note": "Rand per euro", "stooq": "eurzar", "move": 1.0},
+    {"sym": "GBPZAR=X", "name": "Pound / rand", "group": "rand", "prefix": "R", "dec": 3, "note": "Rand per British pound", "stooq": "gbpzar", "move": 1.0},
+
+    {"sym": "GC=F", "name": "Gold", "group": "commodities", "prefix": "$", "dec": 2, "note": "US dollars per ounce", "stooq": "xauusd", "move": 2.0},
+    {"sym": "PL=F", "name": "Platinum", "group": "commodities", "prefix": "$", "dec": 2, "note": "US dollars per ounce", "stooq": "xptusd", "move": 2.5},
+    {"sym": "PA=F", "name": "Palladium", "group": "commodities", "prefix": "$", "dec": 2, "note": "US dollars per ounce", "stooq": "xpdusd", "move": 3.0},
+    {"sym": "SI=F", "name": "Silver", "group": "commodities", "prefix": "$", "dec": 2, "note": "US dollars per ounce", "stooq": "xagusd", "move": 3.0},
+    {"sym": "BZ=F", "name": "Brent crude oil", "group": "commodities", "prefix": "$", "dec": 2, "note": "US dollars per barrel", "move": 3.0},
+    {"sym": "CL=F", "name": "WTI crude oil", "group": "commodities", "prefix": "$", "dec": 2, "note": "US dollars per barrel", "stooq": "cl.f", "move": 3.0},
+    {"sym": "HG=F", "name": "Copper", "group": "commodities", "prefix": "$", "dec": 3, "note": "US dollars per pound", "move": 2.5},
+    {"sym": "NG=F", "name": "Natural gas", "group": "commodities", "prefix": "$", "dec": 3, "note": "US dollars per million BTU", "move": 6.0},
+    {"sym": "ZC=F", "name": "Maize (corn)", "group": "commodities", "prefix": "", "dec": 2, "note": "US cents per bushel", "move": 3.0},
+
+    {"sym": "^J203.JO", "name": "JSE All Share", "group": "indices", "prefix": "", "dec": 0, "note": "FTSE/JSE All Share index", "sa": true, "move": 2.0},
+    {"sym": "^J200.JO", "name": "JSE Top 40", "group": "indices", "prefix": "", "dec": 0, "note": "FTSE/JSE Top 40 index", "sa": true, "move": 2.0},
+    {"sym": "STX40.JO", "name": "Satrix 40 ETF", "group": "indices", "prefix": "R", "dec": 2, "note": "Tracks the JSE Top 40", "cents": true, "sa": true, "move": 2.0},
+    {"sym": "^GSPC", "name": "S&P 500", "group": "indices", "prefix": "", "dec": 0, "note": "US large companies", "stooq": "^spx", "move": 2.0},
+    {"sym": "^IXIC", "name": "Nasdaq Composite", "group": "indices", "prefix": "", "dec": 0, "note": "US technology-heavy index", "stooq": "^ndq", "move": 2.5},
+    {"sym": "^DJI", "name": "Dow Jones", "group": "indices", "prefix": "", "dec": 0, "note": "30 large US companies", "stooq": "^dji", "move": 2.0},
+    {"sym": "^FTSE", "name": "FTSE 100", "group": "indices", "prefix": "", "dec": 0, "note": "London", "stooq": "^ukx", "move": 2.0},
+    {"sym": "^GDAXI", "name": "DAX", "group": "indices", "prefix": "", "dec": 0, "note": "Germany", "stooq": "^dax", "move": 2.0},
+    {"sym": "^N225", "name": "Nikkei 225", "group": "indices", "prefix": "", "dec": 0, "note": "Japan", "stooq": "^nkx", "move": 2.5},
+    {"sym": "000001.SS", "name": "Shanghai Composite", "group": "indices", "prefix": "", "dec": 0, "note": "China", "move": 2.5},
+
+    {"sym": "NPN.JO", "name": "Naspers", "group": "jse", "prefix": "R", "dec": 2, "note": "JSE share price", "sa": true, "move": 5.0},
+    {"sym": "PRX.JO", "name": "Prosus", "group": "jse", "prefix": "R", "dec": 2, "note": "JSE share price", "sa": true, "move": 5.0},
+    {"sym": "SBK.JO", "name": "Standard Bank", "group": "jse", "prefix": "R", "dec": 2, "note": "JSE share price", "sa": true, "move": 5.0},
+    {"sym": "FSR.JO", "name": "FirstRand", "group": "jse", "prefix": "R", "dec": 2, "note": "JSE share price", "sa": true, "move": 5.0},
+    {"sym": "ABG.JO", "name": "Absa", "group": "jse", "prefix": "R", "dec": 2, "note": "JSE share price", "sa": true, "move": 5.0},
+    {"sym": "NED.JO", "name": "Nedbank", "group": "jse", "prefix": "R", "dec": 2, "note": "JSE share price", "sa": true, "move": 5.0},
+    {"sym": "CPI.JO", "name": "Capitec", "group": "jse", "prefix": "R", "dec": 2, "note": "JSE share price", "sa": true, "move": 5.0},
+    {"sym": "SOL.JO", "name": "Sasol", "group": "jse", "prefix": "R", "dec": 2, "note": "JSE share price", "sa": true, "move": 5.0},
+    {"sym": "AGL.JO", "name": "Anglo American", "group": "jse", "prefix": "R", "dec": 2, "note": "JSE share price", "sa": true, "move": 5.0},
+    {"sym": "GFI.JO", "name": "Gold Fields", "group": "jse", "prefix": "R", "dec": 2, "note": "JSE share price", "sa": true, "move": 5.0},
+    {"sym": "IMP.JO", "name": "Impala Platinum", "group": "jse", "prefix": "R", "dec": 2, "note": "JSE share price", "sa": true, "move": 5.0},
+    {"sym": "SSW.JO", "name": "Sibanye-Stillwater", "group": "jse", "prefix": "R", "dec": 2, "note": "JSE share price", "sa": true, "move": 5.0},
+    {"sym": "BHG.JO", "name": "BHP", "group": "jse", "prefix": "R", "dec": 2, "note": "JSE share price", "sa": true, "move": 5.0},
+    {"sym": "MTN.JO", "name": "MTN Group", "group": "jse", "prefix": "R", "dec": 2, "note": "JSE share price", "sa": true, "move": 5.0},
+    {"sym": "VOD.JO", "name": "Vodacom", "group": "jse", "prefix": "R", "dec": 2, "note": "JSE share price", "sa": true, "move": 5.0},
+    {"sym": "SHP.JO", "name": "Shoprite", "group": "jse", "prefix": "R", "dec": 2, "note": "JSE share price", "sa": true, "move": 5.0},
+    {"sym": "DSY.JO", "name": "Discovery", "group": "jse", "prefix": "R", "dec": 2, "note": "JSE share price", "sa": true, "move": 5.0},
+
+    {"sym": "BTC-USD", "name": "Bitcoin", "group": "crypto", "prefix": "$", "dec": 0, "note": "US dollars", "stooq": "btcusd", "move": 6.0},
+    {"sym": "ETH-USD", "name": "Ethereum", "group": "crypto", "prefix": "$", "dec": 2, "note": "US dollars", "stooq": "ethusd", "move": 7.0},
+
+    {"sym": "DX-Y.NYB", "name": "US dollar index", "group": "gauges", "prefix": "", "dec": 2, "note": "Dollar against six major currencies", "move": 99},
+    {"sym": "^TNX", "name": "US 10-year yield", "group": "gauges", "prefix": "", "suffix": "%", "dec": 2, "note": "What the US government pays to borrow for 10 years", "move": 99},
+    {"sym": "^VIX", "name": "Market fear gauge (VIX)", "group": "gauges", "prefix": "", "dec": 2, "note": "Higher means investors expect bigger swings", "move": 99}
+  ],
+
+  "derived": [
+    {"sym": "GOLD-ZAR", "name": "Gold in rand", "a": "GC=F", "b": "ZAR=X", "group": "commodities", "prefix": "R", "dec": 0, "note": "Rand per ounce, calculated from gold and the dollar rate", "sa": true, "move": 2.5},
+    {"sym": "PLAT-ZAR", "name": "Platinum in rand", "a": "PL=F", "b": "ZAR=X", "group": "commodities", "prefix": "R", "dec": 0, "note": "Rand per ounce, calculated from platinum and the dollar rate", "sa": true, "move": 3.0}
+  ],
+
+  "indicators": [
+    {"id": "inflation", "code": "FP.CPI.TOTL.ZG", "name": "Inflation", "unit": "%", "dec": 1, "note": "Yearly rise in consumer prices"},
+    {"id": "unemployment", "code": "SL.UEM.TOTL.ZS", "name": "Unemployment", "unit": "%", "dec": 1, "note": "Share of the labour force without work (international definition)"},
+    {"id": "youth", "code": "SL.UEM.1524.ZS", "name": "Youth unemployment", "unit": "%", "dec": 1, "note": "Ages 15 to 24, share of the youth labour force"},
+    {"id": "gdp", "code": "NY.GDP.MKTP.KD.ZG", "name": "Economic growth", "unit": "%", "dec": 1, "note": "Yearly change in GDP"},
+    {"id": "gdppc", "code": "NY.GDP.PCAP.CD", "name": "Income per person", "unit": "$", "dec": 0, "note": "GDP per person in US dollars"},
+    {"id": "debt", "code": "GC.DOD.TOTL.GD.ZS", "name": "Government debt", "unit": "%", "dec": 1, "note": "Central government debt as a share of GDP"},
+    {"id": "fdi", "code": "BX.KLT.DINV.WD.GD.ZS", "name": "Foreign investment in", "unit": "%", "dec": 1, "note": "Net foreign direct investment as a share of GDP"},
+    {"id": "lending", "code": "FR.INR.LEND", "name": "Bank lending rate", "unit": "%", "dec": 1, "note": "Average rate banks charge on loans"},
+    {"id": "gini", "code": "SI.POV.GINI", "name": "Inequality (Gini)", "unit": "", "dec": 1, "note": "0 is perfectly equal, 100 is maximally unequal"}
+  ],
+
+  "reports": [
+    {"title": "World Economic Outlook", "publisher": "IMF", "url": "https://www.imf.org/en/Publications/WEO", "note": "Global growth and inflation forecasts, updated twice a year"},
+    {"title": "South Africa overview and economic updates", "publisher": "World Bank", "url": "https://www.worldbank.org/en/country/southafrica", "note": "Country analysis and economic update reports"},
+    {"title": "Budget Review and Medium Term Budget Policy Statement", "publisher": "National Treasury", "url": "https://www.treasury.gov.za/", "note": "Where government money comes from and where it goes"},
+    {"title": "Monetary Policy Review and Financial Stability Review", "publisher": "South African Reserve Bank", "url": "https://www.resbank.co.za/", "note": "Interest-rate thinking and banking system risks"},
+    {"title": "Consumer price index and labour force survey", "publisher": "Stats SA", "url": "https://www.statssa.gov.za/", "note": "The official inflation and jobs numbers"},
+    {"title": "Gold Demand Trends", "publisher": "World Gold Council", "url": "https://www.gold.org/goldhub/research/gold-demand-trends", "note": "Quarterly report on who buys gold and why"},
+    {"title": "Platinum Quarterly", "publisher": "World Platinum Investment Council", "url": "https://platinuminvestment.com/", "note": "Supply and demand for platinum, a key South African export"},
+    {"title": "Oil Market Report", "publisher": "OPEC", "url": "https://www.opec.org/", "note": "Monthly view of global oil supply and demand"},
+    {"title": "Annual Economic Report", "publisher": "Bank for International Settlements", "url": "https://www.bis.org/", "note": "How central banks see the world economy"}
+  ]
+}
